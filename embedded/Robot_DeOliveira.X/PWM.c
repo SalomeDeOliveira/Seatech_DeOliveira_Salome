@@ -1,6 +1,7 @@
 #include <xc.h>
 #include "IO.h"
 #include "PWM.h"
+#include "main.h"
 #include "Robot.h"
 #include "ToolBox.h"
 
@@ -49,7 +50,7 @@ double talon = 50;
 //    }
 //}
 
-float acceleration=0.1;
+float acceleration=5;
 
 void PWMUpdateSpeed()
 {
@@ -86,7 +87,7 @@ void PWMUpdateSpeed()
 
 void PWMSetSpeedConsigne (float vitesseEnPourcents, int numeroMoteur){
     if (numeroMoteur==MOTEUR_DROIT){
-        robotState.vitesseDroiteConsigne= vitesseEnPourcents;
+        robotState.vitesseDroiteConsigne= -vitesseEnPourcents;
     }
     else if (numeroMoteur==MOTEUR_GAUCHE){
         robotState.vitesseGaucheConsigne= vitesseEnPourcents;

@@ -1,7 +1,7 @@
 /*
  * File:   IO.c
  */
-
+#include "main.h"
 #include <xc.h>
 #include "IO.h"
 
