@@ -7,6 +7,7 @@
 
 unsigned long timestamp;
 
+
 //Initialisation d?un timer 16 bits
 void InitTimer1(void) {
     //Timer1 pour horodater les mesures (1ms)
